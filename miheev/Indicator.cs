@@ -16,6 +16,7 @@ namespace miheev
         {
             Word = word;
         }
+        public string GetWord() => Word;
 
         static public List<Indicator> GetIntoFile(string FileName)
         {

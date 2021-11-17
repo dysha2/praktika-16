@@ -36,6 +36,7 @@ namespace miheev
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -76,6 +77,7 @@ namespace miheev
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 38);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "file";
             // 
             // button2
             // 
@@ -107,11 +109,21 @@ namespace miheev
             this.textBox2.Size = new System.Drawing.Size(104, 38);
             this.textBox2.TabIndex = 6;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 471);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Введите имя текстового файла";
+            // 
             // IndicatorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 480);
+            this.ClientSize = new System.Drawing.Size(699, 486);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -136,5 +148,6 @@ namespace miheev
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

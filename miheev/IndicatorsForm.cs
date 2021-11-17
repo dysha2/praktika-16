@@ -25,8 +25,20 @@ namespace miheev
         }
         public void AddIndicator(Indicator ind)
         {
-            indicators.Add(ind);
-            UpdateListBox();
+            int check = 0;
+            foreach (Indicator i in indicators)
+            {
+                if (i.GetWord().ToLower() == ind.GetWord().ToLower()) ++check;
+            }
+            if (check==0)
+            {
+                indicators.Add(ind);
+                UpdateListBox();
+            }else
+            {
+                MessageBox.Show("Указатель с таким словом уже имеется");
+            }
+
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -34,7 +46,16 @@ namespace miheev
             string file = textBox1.Text;
             if (!file.EndsWith(".txt")) file += ".txt";
             if (File.Exists(file)) {
-                indicators.AddRange(Indicator.GetIntoFile(file));
+                if (indicators.Count>0)
+                {
+                    List<Indicator> inds = Indicator.GetIntoFile(file);
+                    //inds.AddRange(indicators);
+                    for (int i = 0; i < inds.Count; i++)
+                    {
+                        if (indicators.Exists(x => x == inds[i])) indicators.Add(inds[i]);
+                    }
+                } else indicators.AddRange(Indicator.GetIntoFile(file));
+
                 UpdateListBox();
             } else
             {
@@ -65,7 +86,13 @@ namespace miheev
                 {
                     indicators[listBox1.SelectedIndex].RemovePage(page);
                     UpdateListBox();
+                } else
+                {
+                    MessageBox.Show("Введите в поле ниже номер страницы");
                 }
+            } else
+            {
+                MessageBox.Show("Выберите указатель из списка");
             }
         }
     }
