@@ -49,7 +49,6 @@ namespace miheev
                 if (indicators.Count>0)
                 {
                     List<Indicator> inds = Indicator.GetIntoFile(file);
-                    //inds.AddRange(indicators);
                     for (int i = 0; i < inds.Count; i++)
                     {
                         if (indicators.Exists(x => x == inds[i])) indicators.Add(inds[i]);
