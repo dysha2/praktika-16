@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D59A1DBC-5BB1-4437-905B-27A87B767696}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>miheev</RootNamespace>
+    <AssemblyName>miheev</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGroupForm.Designer.cs">
+      <DependentUpon>AddGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIndicator.Designer.cs">
+      <DependentUpon>AddIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddressAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressAdd.Designer.cs">
+      <DependentUpon>AddressAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddressesOfOrganizations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressesOfOrganizations.Designer.cs">
+      <DependentUpon>AddressesOfOrganizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Array.cs" />
+    <Compile Include="ArrayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrayForm.Designer.cs">
+      <DependentUpon>ArrayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Indicator.cs" />
+    <Compile Include="ComplexNumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplexNumForm.Designer.cs">
+      <DependentUpon>ComplexNumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IndicatorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndicatorsForm.Designer.cs">
+      <DependentUpon>IndicatorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationAddress.cs" />
+    <Compile Include="ComplexNumber.cs" />
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsGroup.cs" />
+    <Compile Include="VektorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VektorForm.Designer.cs">
+      <DependentUpon>VektorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vektors.cs" />
+    <EmbeddedResource Include="AddGroupForm.resx">
+      <DependentUpon>AddGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIndicator.resx">
+      <DependentUpon>AddIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddressAdd.resx">
+      <DependentUpon>AddressAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddressesOfOrganizations.resx">
+      <DependentUpon>AddressesOfOrganizations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArrayForm.resx">
+      <DependentUpon>ArrayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplexNumForm.resx">
+      <DependentUpon>ComplexNumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndicatorsForm.resx">
+      <DependentUpon>IndicatorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VektorForm.resx">
+      <DependentUpon>VektorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
