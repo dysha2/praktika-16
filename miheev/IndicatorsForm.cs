@@ -49,7 +49,6 @@ namespace miheev
                 if (indicators.Count>0)
                 {
                     List<Indicator> inds = Indicator.GetIntoFile(file);
-                    //inds.AddRange(indicators);
                     for (int i = 0; i < inds.Count; i++)
                     {
                         if (indicators.Exists(x => x == inds[i])) indicators.Add(inds[i]);
@@ -93,6 +92,28 @@ namespace miheev
             } else
             {
                 MessageBox.Show("Выберите указатель из списка");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text!="")
+            {
+                if (Indicator.GetPagesByWord(indicators, textBox3.Text).Length!=0)
+                {
+                    uint[] pages = Indicator.GetPagesByWord(indicators, textBox3.Text);
+                    string pagess = "";
+                    foreach (uint page in pages)
+                    {
+                        if (page != 0) pagess += page.ToString() + " ";
+                    }
+                    MessageBox.Show($"Страницы на которых встречается введённое слово\n{pagess}");
+                } else { 
+                    MessageBox.Show("Введённое слово не найдено");
+                }
+            } else
+            {
+                MessageBox.Show("Введите слово в поле ниже");
             }
         }
     }

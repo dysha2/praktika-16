@@ -48,6 +48,16 @@ namespace miheev
                     }
                     return indicators;
         }
+
+        static public uint[] GetPagesByWord(List<Indicator> indicators, string aWord)
+        {
+            foreach(Indicator ind in indicators)
+            {
+                if (ind.Word.ToLower().StartsWith(aWord.ToLower())) return ind.pages;
+            }
+            return new uint[0];
+        } 
+
         public bool AddPage(uint page)
         {
                 for (int i=0;i<pages.Length;i++)

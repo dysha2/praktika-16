@@ -37,6 +37,8 @@ namespace miheev
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox1
@@ -62,7 +64,7 @@ namespace miheev
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(6, 370);
+            this.button1.Location = new System.Drawing.Point(754, 262);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 54);
             this.button1.TabIndex = 2;
@@ -73,7 +75,7 @@ namespace miheev
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(6, 430);
+            this.textBox1.Location = new System.Drawing.Point(754, 322);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 38);
             this.textBox1.TabIndex = 3;
@@ -82,7 +84,7 @@ namespace miheev
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(236, 370);
+            this.button2.Location = new System.Drawing.Point(754, 206);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 54);
             this.button2.TabIndex = 4;
@@ -93,7 +95,7 @@ namespace miheev
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(466, 370);
+            this.button3.Location = new System.Drawing.Point(754, 103);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(224, 54);
             this.button3.TabIndex = 5;
@@ -104,7 +106,7 @@ namespace miheev
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(530, 430);
+            this.textBox2.Location = new System.Drawing.Point(818, 163);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(104, 38);
             this.textBox2.TabIndex = 6;
@@ -112,17 +114,38 @@ namespace miheev
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 471);
+            this.label2.Location = new System.Drawing.Point(757, 363);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Введите имя текстового файла";
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(754, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(224, 54);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Поиск элемента";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(754, 59);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(224, 38);
+            this.textBox3.TabIndex = 9;
+            // 
             // IndicatorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 486);
+            this.ClientSize = new System.Drawing.Size(1010, 378);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
@@ -149,5 +172,7 @@ namespace miheev
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
